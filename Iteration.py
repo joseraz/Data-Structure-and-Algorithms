@@ -26,7 +26,7 @@ numGuess = 0
 low = 0
 high = 25
 ans = (high + low)/2.0 
-while abs(ans**2 -x ) >= epsilon:
+while abs(ans**2 - x ) >= epsilon:
     print(('low = '), low, ('high = '), high, ('ans = '), ans)
     numGuess += 1
     if ans**2 < x:
