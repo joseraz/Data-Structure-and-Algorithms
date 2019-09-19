@@ -11,9 +11,12 @@ def calculate(x):
 a = ['a', 'A', 'er', 'cere']
 b = []
 for i in a:
+        print('b', b)
+        print('calculate', calculate(i))
         b.append(calculate(i))
-
-print(b)
+# I do not understand what is happening here.
+        #Oh, its taking the length of each string and printing it out, duh.
+print('>>>', b)
 
 a = [3,6,8,7]
 b=[]
