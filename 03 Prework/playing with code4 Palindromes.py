@@ -13,8 +13,11 @@ def isPalindrome(s):
         s = s.lower()
         letters = ''
         for c in s:
+            print('>> out', c)
             if c in 'abcdefghijklmnopqrstuvwxyz': #what does this mean???
-                   letters = letters + c
+                print('>>> in', c)
+                letters = letters + c
+                print(letters, c)
         return letters
         
     def isPal(s):
@@ -28,3 +31,5 @@ def isPalindrome(s):
 def testIsPalindrome():
     print('Try dogGod')
     print(isPalindrome('dogGod'))
+    
+testIsPalindrome()

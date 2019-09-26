@@ -25,6 +25,8 @@ A = array.array('i',L)
 A
 
 a = np.array([1,4,2,5,3])
+a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+a[2:-1]
 
 b = np.array([1,4,2,5,3], dtype='float32')
 
@@ -58,3 +60,11 @@ k
 np.eye(4)
 
 np.empty(3)
+
+a=np.random.rand(3, 3)
+
+print(a)
+
+a[2,1]# First one is row and the second one is columns
+
+list(range(0,4))
