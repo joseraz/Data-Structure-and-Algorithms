@@ -14,3 +14,21 @@ class Node(object):
     def __str__(self):
         return self.name
     
+def printPath(path):
+    """Assumes path is a list of nodes"""
+    result = ''
+    for i in range(len(path)):
+        result += str(path[i])
+        if i != len(path)-1:
+            result = result + '->'
+    return result
+    
+def DFS(graph):
+    pass
+
+def search(graph, start, end):
+    pass
+
+def testSP():
+    nodes = []
+    pass
