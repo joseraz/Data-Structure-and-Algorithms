@@ -10,9 +10,22 @@ class Node: #This makes a object class called Node
         self.value = value #assigns the value to the self
         self.adjacentNodes = [] #assigns a list of adjancentNodes to the self with an empty list
         
-def depthFirst(node, soughtValue): #This tells the node to llos for a value
+def depthFirst(node, soughtValue, visitedNodes): #This tells the node to look for a value
     if node.value == soughtValue:   #This is when it finds the node to return True
         return True
+    
+    visitedNodes.add(node) #Added this to keep track of visited nodes
     for adjNode in node.adjacentNodes: # A recursion to call again the function and keep searching
-        depthFirst(adjNode, soughtValue)  # Inception style you have to go deeper
+        if adjNode not in visitedNodes: #Thi is to avoid the algorithm from looping infinitely
+            if depthFirst(adjNode, soughtValue, visitedNodes):
+                return True    # Inception style you have to go deeper
+            
+    return False
+
+from collection import queue
+
+def depthFirst2(startingNode, soughtValue):
+    visitedNodes = set()
+    queue = deque([StartingNode])
+    
         
