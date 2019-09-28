@@ -22,10 +22,24 @@ def depthFirst(node, soughtValue, visitedNodes): #This tells the node to look fo
             
     return False
 
-from collection import queue
+from collection import deque
 
 def depthFirst2(startingNode, soughtValue):
     visitedNodes = set()
-    queue = deque([StartingNode])
+    queue = deque([startingNode])
+    
+    while len(queue)>0:
+        node = queue.pop()
+        if node in visitedNodes:
+            continue
+        
+        visitedNodes.add(node)
+        if node.value == soughtValue:
+            return True
+        
+        for n in node.adjacentNodes:
+            if n not in visitedNodes:
+                queue.appendleft(n)
+    return False
     
         
