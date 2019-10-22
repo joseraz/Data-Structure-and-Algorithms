@@ -10,3 +10,9 @@ print(x)
 L =[3]
 if isinstance(L, list):
     print(L)
+
+x = 1, 2
+print(x[1])
+
+y = set(x)
+print(y)

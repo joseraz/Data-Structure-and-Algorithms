@@ -18,5 +18,9 @@ def testFib(n):
         print('fib of', i, '=', fib(i))
         
 
-for i in map(fib, [2, 6, 4]):
+for i in map(fib, [2, 3, 4, 5, 6,7, 8, 9]):
     print(i)
+
+l = [2,3,4,5,6,7,8,9]
+test = list(map(fib, l))
+print(test)
